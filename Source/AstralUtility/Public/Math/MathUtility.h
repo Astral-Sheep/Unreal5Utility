@@ -19,10 +19,10 @@ public:
 
 #pragma region NEGATE
 
-	UFUNCTION(BlueprintCallable, BlueprintPure, Category="Math|Integer", DisplayName="Negate (int)", meta=(CompactNodeTitle="-", Keywords="- negate"))
+	UFUNCTION(BlueprintCallable, BlueprintPure, Category="Math|Integer", DisplayName="Negate", meta=(CompactNodeTitle="-", Keywords="- negate"))
 	static int NegateInt(const int Value) { return -Value; }
 
-	UFUNCTION(BlueprintCallable, BlueprintPure, Category="Math|Integer64", DisplayName="Negate (int64)", meta=(CompactNodeTitle="-", Keywords="- negate"))
+	UFUNCTION(BlueprintCallable, BlueprintPure, Category="Math|Integer64", DisplayName="Negate", meta=(CompactNodeTitle="-", Keywords="- negate"))
 	static int64 NegateInt64(const int64 Value) { return -Value; }
 
 	UFUNCTION(BlueprintCallable, BlueprintPure, Category="Math|Float", DisplayName="Negate (simple-precision)", meta=(CompactNodeTitle="-", Keywords="- negate"))
@@ -31,39 +31,39 @@ public:
 	UFUNCTION(BlueprintCallable, BlueprintPure, Category="Math|Float", DisplayName="Negate (double-precision)", meta=(CompactNodeTitle="-", Keywords="- negate"))
 	static double NegateDouble(const double Value) { return -Value; }
 
-	UFUNCTION(BlueprintCallable, BlueprintPure, Category="Math|Vector4", DisplayName="Negate (Vector4)", meta=(CompactNodeTitle="-", Keywords="- negate"))
+	UFUNCTION(BlueprintCallable, BlueprintPure, Category="Math|Vector4", DisplayName="Negate", meta=(CompactNodeTitle="-", Keywords="- negate"))
 	static FVector4 NegateVector4(const FVector4 &Value) { return -Value; }
 
-	UFUNCTION(BlueprintCallable, BlueprintPure, Category="Math|Vector", DisplayName="Negate (Vector)", meta=(CompactNodeTitle="-", Keywords="- negate"))
+	UFUNCTION(BlueprintCallable, BlueprintPure, Category="Math|Vector", DisplayName="Negate", meta=(CompactNodeTitle="-", Keywords="- negate"))
 	static FVector NegateVector(const FVector &Value) { return -Value; }
 
-	UFUNCTION(BlueprintCallable, BlueprintPure, Category="Math|Vector2D", DisplayName="Negate (Vector2D)", meta=(CompactNodeTitle="-", Keywords="- negate"))
+	UFUNCTION(BlueprintCallable, BlueprintPure, Category="Math|Vector2D", DisplayName="Negate", meta=(CompactNodeTitle="-", Keywords="- negate"))
 	static FVector2D NegateVector2D(const FVector2D &Value) { return -Value; }
 
-	UFUNCTION(BlueprintCallable, BlueprintPure, Category="Math|Rotator", DisplayName="Negate (Rotator)", meta=(CompactNodeTitle="-", Keywords="- negate"))
+	UFUNCTION(BlueprintCallable, BlueprintPure, Category="Math|Rotator", DisplayName="Negate", meta=(CompactNodeTitle="-", Keywords="- negate"))
 	static FRotator NegateRotator(const FRotator &Rotator) { return FRotator(-Rotator.Pitch, -Rotator.Yaw, -Rotator.Roll); }
 
 #pragma endregion //NEGATE
 
 #pragma region MOD
 
-	UFUNCTION(BlueprintCallable, BlueprintPure, Category="Math|Vector4", DisplayName="Mod (Vector4)", meta=(CompactNodeTitle="%", Keywords="% modulus modulo"))
+	UFUNCTION(BlueprintCallable, BlueprintPure, Category="Math|Vector4", DisplayName="Mod", meta=(CompactNodeTitle="%", Keywords="% modulus modulo"))
 	static FVector4 ModVector4(const FVector4 &A, const FVector4 &B);
 
-	UFUNCTION(BlueprintCallable, BlueprintPure, Category="Math|Vector", DisplayName="Mod (Vector)", meta=(CompactNodeTitle="%", Keywords="% modulus modulo"))
+	UFUNCTION(BlueprintCallable, BlueprintPure, Category="Math|Vector", DisplayName="Mod", meta=(CompactNodeTitle="%", Keywords="% modulus modulo"))
 	static FVector ModVector(const FVector &A, const FVector &B);
 
-	UFUNCTION(BlueprintCallable, BlueprintPure, Category="Math|Vector2D", DisplayName="Mod (Vector2D)", meta=(CompactNodeTitle="%", Keywords="% modulus modulo"))
+	UFUNCTION(BlueprintCallable, BlueprintPure, Category="Math|Vector2D", DisplayName="Mod", meta=(CompactNodeTitle="%", Keywords="% modulus modulo"))
 	static FVector2D ModVector2D(const FVector2D &A, const FVector2D &B);
 
 #pragma endregion //MOD
 
 #pragma region POS_MOD
 
-	UFUNCTION(BlueprintCallable, BlueprintPure, Category="Math|Integer", DisplayName="PosMod (int)", meta=(CompactNodeTitle="% (+)", Keywords="% + positive modulus modulo"))
+	UFUNCTION(BlueprintCallable, BlueprintPure, Category="Math|Integer", DisplayName="PosMod", meta=(CompactNodeTitle="% (+)", Keywords="% + positive modulus modulo"))
 	static int PosModInt(const int A, const int B);
 
-	UFUNCTION(BlueprintCallable, BlueprintPure, Category="Math|Integer64", DisplayName="PosMod (int64)", meta=(CompactNodeTitle="% (+)", Keywords="% + positive modulus modulo"))
+	UFUNCTION(BlueprintCallable, BlueprintPure, Category="Math|Integer64", DisplayName="PosMod", meta=(CompactNodeTitle="% (+)", Keywords="% + positive modulus modulo"))
 	static int64 PosModInt64(const int64 A, const int64 B);
 
 	UFUNCTION(BlueprintCallable, BlueprintPure, Category="Math|Float", DisplayName="PosMod (single-precision)", meta=(CompactNodeTitle="% (+)", Keywords="% + positive modulus modulo"))
@@ -72,13 +72,13 @@ public:
 	UFUNCTION(BlueprintCallable, BlueprintPure, Category="Math|Float", DisplayName="PosMod (double-precision)", meta=(CompactNodeTitle="% (+)", Keywords="% + positive modulus modulo"))
 	static double PosModDouble(const double A, const double B);
 
-	UFUNCTION(BlueprintCallable, BlueprintPure, Category="Math|Vector4", DisplayName="PosMod (Vector4)", meta=(CompactNodeTitle="% (+)", Keywords="% + positive modulus modulo"))
+	UFUNCTION(BlueprintCallable, BlueprintPure, Category="Math|Vector4", DisplayName="PosMod", meta=(CompactNodeTitle="% (+)", Keywords="% + positive modulus modulo"))
 	static FVector4 PosModVector4(const FVector4 &A, const FVector4 &B);
 
-	UFUNCTION(BlueprintCallable, BlueprintPure, Category="Math|Vector", DisplayName="PosMod (Vector)", meta=(CompactNodeTitle="% (+)", Keywords="% + positive modulus modulo"))
+	UFUNCTION(BlueprintCallable, BlueprintPure, Category="Math|Vector", DisplayName="PosMod", meta=(CompactNodeTitle="% (+)", Keywords="% + positive modulus modulo"))
 	static FVector PosModVector(const FVector &A, const FVector &B);
 
-	UFUNCTION(BlueprintCallable, BlueprintPure, Category="Math|Vector2D", DisplayName="PosMod (Vector2D)", meta=(CompactNodeTitle="% (+)", Keywords="% + positive modulus modulo"))
+	UFUNCTION(BlueprintCallable, BlueprintPure, Category="Math|Vector2D", DisplayName="PosMod", meta=(CompactNodeTitle="% (+)", Keywords="% + positive modulus modulo"))
 	static FVector2D PosModVector2D(const FVector2D &A, const FVector2D &B);
 
 #pragma endregion //POS_MOD
@@ -125,13 +125,13 @@ public:
 
 #pragma region ADD_REF
 
-	UFUNCTION(BlueprintCallable, Category="Math|Byte", DisplayName="Add (byte)", meta=(CompactNodeTitle="+=", Keywords="+= add assign ref"))
+	UFUNCTION(BlueprintCallable, Category="Math|Byte", DisplayName="Add", meta=(CompactNodeTitle="+=", Keywords="+= add assign ref"))
 	static uint8 &AddRefByte(UPARAM(ref) uint8 &Ref, const uint8 Value);
 
-	UFUNCTION(BlueprintCallable, Category="Math|Integer", DisplayName="Add (int)", meta=(CompactNodeTitle="+=", Keywords="+= add assign ref"))
+	UFUNCTION(BlueprintCallable, Category="Math|Integer", DisplayName="Add", meta=(CompactNodeTitle="+=", Keywords="+= add assign ref"))
 	static int &AddRefInt(UPARAM(ref) int &Ref, const int Value);
 
-	UFUNCTION(BlueprintCallable, Category="Math|Integer64", DisplayName="Add (int64)", meta=(CompactNodeTitle="+=", Keywords="+= add assign ref"))
+	UFUNCTION(BlueprintCallable, Category="Math|Integer64", DisplayName="Add", meta=(CompactNodeTitle="+=", Keywords="+= add assign ref"))
 	static int64 &AddRefInt64(UPARAM(ref) int64 &Ref, const int64 Value);
 
 	UFUNCTION(BlueprintCallable, Category="Math|Float", DisplayName="Add (single-precision)", meta=(CompactNodeTitle="+=", Keywords="+= add assign ref"))
@@ -140,29 +140,29 @@ public:
 	UFUNCTION(BlueprintCallable, Category="Math|Float", DisplayName="Add (double-precision)", meta=(CompactNodeTitle="+=", Keywords="+= add assign ref"))
 	static double &AddRefDouble(UPARAM(ref) double &Ref, const double Value);
 
-	UFUNCTION(BlueprintCallable, Category="Math|Vector4", DisplayName="Add (Vector4)", meta=(CompactNodeTitle="+=", Keywords="+= add assign ref"))
+	UFUNCTION(BlueprintCallable, Category="Math|Vector4", DisplayName="Add", meta=(CompactNodeTitle="+=", Keywords="+= add assign ref"))
 	static FVector4 &AddRefVector4(UPARAM(ref) FVector4 &Ref, const FVector4 &Value);
 
-	UFUNCTION(BlueprintCallable, Category="Math|Vector", DisplayName="Add (Vector)", meta=(CompactNodeTitle="+=", Keywords="+= add assign ref"))
+	UFUNCTION(BlueprintCallable, Category="Math|Vector", DisplayName="Add", meta=(CompactNodeTitle="+=", Keywords="+= add assign ref"))
 	static FVector &AddRefVector(UPARAM(ref) FVector &Ref, const FVector &Value);
 
-	UFUNCTION(BlueprintCallable, Category="Math|Vector2D", DisplayName="Add (Vector2D)", meta=(CompactNodeTitle="+=", Keywords="+= add assign ref"))
+	UFUNCTION(BlueprintCallable, Category="Math|Vector2D", DisplayName="Add", meta=(CompactNodeTitle="+=", Keywords="+= add assign ref"))
 	static FVector2D &AddRefVector2D(UPARAM(ref) FVector2D &Ref, const FVector2D &Value);
 
-	UFUNCTION(BlueprintCallable, Category="Math|Rotator", DisplayName="Add (Rotator)", meta=(CompactNodeTitle="+=", Keywords="+= add assign ref"))
+	UFUNCTION(BlueprintCallable, Category="Math|Rotator", DisplayName="Add", meta=(CompactNodeTitle="+=", Keywords="+= add assign ref"))
 	static FRotator &AddRefRotator(UPARAM(ref) FRotator &Ref, const FRotator &Value);
 
 #pragma endregion //ADD_REF
 
 #pragma region SUB_REF
 
-	UFUNCTION(BlueprintCallable, Category="Math|Byte", DisplayName="Subtract (byte)", meta=(CompactNodeTitle="-=", Keywords="-= subtract assign ref"))
+	UFUNCTION(BlueprintCallable, Category="Math|Byte", DisplayName="Subtract", meta=(CompactNodeTitle="-=", Keywords="-= subtract assign ref"))
 	static uint8 &SubRefByte(UPARAM(ref) uint8 &Ref, const uint8 Value);
 
-	UFUNCTION(BlueprintCallable, Category="Math|Integer", DisplayName="Subtract (int)", meta=(CompactNodeTitle="-=", Keywords="-= subtract assign ref"))
+	UFUNCTION(BlueprintCallable, Category="Math|Integer", DisplayName="Subtract", meta=(CompactNodeTitle="-=", Keywords="-= subtract assign ref"))
 	static int &SubRefInt(UPARAM(ref) int &Ref, const int Value);
 
-	UFUNCTION(BlueprintCallable, Category="Math|Integer64", DisplayName="Subtract (int64)", meta=(CompactNodeTitle="-=", Keywords="-= subtract assign ref"))
+	UFUNCTION(BlueprintCallable, Category="Math|Integer64", DisplayName="Subtract", meta=(CompactNodeTitle="-=", Keywords="-= subtract assign ref"))
 	static int64 &SubRefInt64(UPARAM(ref) int64 &Ref, const int64 Value);
 
 	UFUNCTION(BlueprintCallable, Category="Math|Float", DisplayName="Subtract (single-precision)", meta=(CompactNodeTitle="-=", Keywords="-= subtract assign ref"))
@@ -171,29 +171,29 @@ public:
 	UFUNCTION(BlueprintCallable, Category="Math|Float", DisplayName="Subtract (double-precision)", meta=(CompactNodeTitle="-=", Keywords="-= subtract assign ref"))
 	static double &SubRefDouble(UPARAM(ref) double &Ref, const double Value);
 
-	UFUNCTION(BlueprintCallable, Category="Math|Vector4", DisplayName="Subtract (Vector4)", meta=(CompactNodeTitle="-=", Keywords="-= subtract assign ref"))
+	UFUNCTION(BlueprintCallable, Category="Math|Vector4", DisplayName="Subtract", meta=(CompactNodeTitle="-=", Keywords="-= subtract assign ref"))
 	static FVector4 &SubRefVector4(UPARAM(ref) FVector4 &Ref, const FVector4 &Value);
 
-	UFUNCTION(BlueprintCallable, Category="Math|Vector", DisplayName="Subtract (Vector)", meta=(CompactNodeTitle="-=", Keywords="-= subtract assign ref"))
+	UFUNCTION(BlueprintCallable, Category="Math|Vector", DisplayName="Subtract", meta=(CompactNodeTitle="-=", Keywords="-= subtract assign ref"))
 	static FVector &SubRefVector(UPARAM(ref) FVector &Ref, const FVector &Value);
 
-	UFUNCTION(BlueprintCallable, Category="Math|Vector2D", DisplayName="Subtract (Vector2D)", meta=(CompactNodeTitle="-=", Keywords="-= subtract assign ref"))
+	UFUNCTION(BlueprintCallable, Category="Math|Vector2D", DisplayName="Subtract", meta=(CompactNodeTitle="-=", Keywords="-= subtract assign ref"))
 	static FVector2D &SubRefVector2D(UPARAM(ref) FVector2D &Ref, const FVector2D &Value);
 
-	UFUNCTION(BlueprintCallable, Category="Math|Rotator", DisplayName="Subtract (Rotator)", meta=(CompactNodeTitle="-=", Keywords="-= subtract assign ref"))
+	UFUNCTION(BlueprintCallable, Category="Math|Rotator", DisplayName="Subtract", meta=(CompactNodeTitle="-=", Keywords="-= subtract assign ref"))
 	static FRotator &SubRefRotator(UPARAM(ref) FRotator &Ref, const FRotator &Value);
 
 #pragma endregion //SUB_REF
 
 #pragma region MULT_REF
 
-	UFUNCTION(BlueprintCallable, Category="Math|Byte", DisplayName="Multiply (byte)", meta=(CompactNodeTitle="*=", Keywords="*= multiply assign ref"))
+	UFUNCTION(BlueprintCallable, Category="Math|Byte", DisplayName="Multiply", meta=(CompactNodeTitle="*=", Keywords="*= multiply assign ref"))
 	static uint8 &MultRefByte(UPARAM(ref) uint8 &Ref, const uint8 Value);
 
-	UFUNCTION(BlueprintCallable, Category="Math|Integer", DisplayName="Multiply (int)", meta=(CompactNodeTitle="*=", Keywords="*= multiply assign ref"))
+	UFUNCTION(BlueprintCallable, Category="Math|Integer", DisplayName="Multiply", meta=(CompactNodeTitle="*=", Keywords="*= multiply assign ref"))
 	static int &MultRefInt(UPARAM(ref) int &Ref, const int Value);
 
-	UFUNCTION(BlueprintCallable, Category="Math|Integer64", DisplayName="Multiply (int64)", meta=(CompactNodeTitle="*=", Keywords="*= multiply assign ref"))
+	UFUNCTION(BlueprintCallable, Category="Math|Integer64", DisplayName="Multiply", meta=(CompactNodeTitle="*=", Keywords="*= multiply assign ref"))
 	static int64 &MultRefInt64(UPARAM(ref) int64 &Ref, const int64 Value);
 
 	UFUNCTION(BlueprintCallable, Category="Math|Float", DisplayName="Multiply (single-precision)", meta=(CompactNodeTitle="*=", Keywords="*= multiply assign ref"))
@@ -202,26 +202,26 @@ public:
 	UFUNCTION(BlueprintCallable, Category="Math|Float", DisplayName="Multiply (double-precision)", meta=(CompactNodeTitle="*=", Keywords="*= multiply assign ref"))
 	static double &MultRefDouble(UPARAM(ref) double &Ref, const double Value);
 
-	UFUNCTION(BlueprintCallable, Category="Math|Vector4", DisplayName="Multiply (Vector4)", meta=(CompactNodeTitle="*=", Keywords="*= multiply assign ref"))
+	UFUNCTION(BlueprintCallable, Category="Math|Vector4", DisplayName="Multiply", meta=(CompactNodeTitle="*=", Keywords="*= multiply assign ref"))
 	static FVector4 &MultRefVector4(UPARAM(ref) FVector4 &Ref, const FVector4 &Value);
 
-	UFUNCTION(BlueprintCallable, Category="Math|Vector", DisplayName="Multiply (Vector)", meta=(CompactNodeTitle="*=", Keywords="*= multiply assign ref"))
+	UFUNCTION(BlueprintCallable, Category="Math|Vector", DisplayName="Multiply", meta=(CompactNodeTitle="*=", Keywords="*= multiply assign ref"))
 	static FVector &MultRefVector(UPARAM(ref) FVector &Ref, const FVector &Value);
 
-	UFUNCTION(BlueprintCallable, Category="Math|Vector2D", DisplayName="Multiply (Vector2D)", meta=(CompactNodeTitle="*=", Keywords="*= multiply assign ref"))
+	UFUNCTION(BlueprintCallable, Category="Math|Vector2D", DisplayName="Multiply", meta=(CompactNodeTitle="*=", Keywords="*= multiply assign ref"))
 	static FVector2D &MultRefVector2D(UPARAM(ref) FVector2D &Ref, const FVector2D &Value);
 
 #pragma endregion //MULT_REF
 
 #pragma region DIV_REF
 
-	UFUNCTION(BlueprintCallable, Category="Math|Byte", DisplayName="Divide (byte)", meta=(CompactNodeTitle="/=", Keywords="/= divide assign ref"))
+	UFUNCTION(BlueprintCallable, Category="Math|Byte", DisplayName="Divide", meta=(CompactNodeTitle="/=", Keywords="/= divide assign ref"))
 	static uint8 &DivRefByte(UPARAM(ref) uint8 &Ref, const uint8 Value);
 
-	UFUNCTION(BlueprintCallable, Category="Math|Integer", DisplayName="Divide (int)", meta=(CompactNodeTitle="/=", Keywords="/= divide assign ref"))
+	UFUNCTION(BlueprintCallable, Category="Math|Integer", DisplayName="Divide", meta=(CompactNodeTitle="/=", Keywords="/= divide assign ref"))
 	static int &DivRefInt(UPARAM(ref) int &Ref, const int Value);
 
-	UFUNCTION(BlueprintCallable, Category="Math|Integer64", DisplayName="Divide (int64)", meta=(CompactNodeTitle="/=", Keywords="/= divide assign ref"))
+	UFUNCTION(BlueprintCallable, Category="Math|Integer64", DisplayName="Divide", meta=(CompactNodeTitle="/=", Keywords="/= divide assign ref"))
 	static int64 &DivRefInt64(UPARAM(ref) int64 &Ref, const int64 Value);
 
 	UFUNCTION(BlueprintCallable, Category="Math|Float", DisplayName="Divide (single-precision)", meta=(CompactNodeTitle="/=", Keywords="/= divide assign ref"))
@@ -230,26 +230,26 @@ public:
 	UFUNCTION(BlueprintCallable, Category="Math|Float", DisplayName="Divide (double-precision)", meta=(CompactNodeTitle="/=", Keywords="/= divide assign ref"))
 	static double &DivRefDouble(UPARAM(ref) double &Ref, const double Value);
 
-	UFUNCTION(BlueprintCallable, Category="Math|Vector4", DisplayName="Divide (Vector4)", meta=(CompactNodeTitle="/=", Keywords="/= divide assign ref"))
+	UFUNCTION(BlueprintCallable, Category="Math|Vector4", DisplayName="Divide", meta=(CompactNodeTitle="/=", Keywords="/= divide assign ref"))
 	static FVector4 &DivRefVector4(UPARAM(ref) FVector4 &Ref, const FVector4 &Value);
 
-	UFUNCTION(BlueprintCallable, Category="Math|Vector", DisplayName="Divide (Vector)", meta=(CompactNodeTitle="/=", Keywords="/= divide assign ref"))
+	UFUNCTION(BlueprintCallable, Category="Math|Vector", DisplayName="Divide", meta=(CompactNodeTitle="/=", Keywords="/= divide assign ref"))
 	static FVector &DivRefVector(UPARAM(ref) FVector &Ref, const FVector &Value);
 
-	UFUNCTION(BlueprintCallable, Category="Math|Vector2D", DisplayName="Divide (Vector2D)", meta=(CompactNodeTitle="/=", Keywords="/= divide assign ref"))
+	UFUNCTION(BlueprintCallable, Category="Math|Vector2D", DisplayName="Divide", meta=(CompactNodeTitle="/=", Keywords="/= divide assign ref"))
 	static FVector2D &DivRefVector2D(UPARAM(ref) FVector2D &Ref, const FVector2D &Value);
 
 #pragma endregion //DIV_REF
 
 #pragma region MOD_REF
 
-	UFUNCTION(BlueprintCallable, Category="Math|Byte", DisplayName="Mod (byte)", meta=(CompactNodeTitle="%=", Keywords="%= modulo modulus assign ref"))
+	UFUNCTION(BlueprintCallable, Category="Math|Byte", DisplayName="Mod", meta=(CompactNodeTitle="%=", Keywords="%= modulo modulus assign ref"))
 	static uint8 &ModRefByte(UPARAM(ref) uint8 &Ref, const uint8 Value);
 
-	UFUNCTION(BlueprintCallable, Category="Math|Integer", DisplayName="Mod (int)", meta=(CompactNodeTitle="%=", Keywords="%= modulo modulus assign ref"))
+	UFUNCTION(BlueprintCallable, Category="Math|Integer", DisplayName="Mod", meta=(CompactNodeTitle="%=", Keywords="%= modulo modulus assign ref"))
 	static int &ModRefInt(UPARAM(ref) int &Ref, const int Value);
 
-	UFUNCTION(BlueprintCallable, Category="Math|Integer64", DisplayName="Mod (int64)", meta=(CompactNodeTitle="%=", Keywords="%= modulo modulus assign ref"))
+	UFUNCTION(BlueprintCallable, Category="Math|Integer64", DisplayName="Mod", meta=(CompactNodeTitle="%=", Keywords="%= modulo modulus assign ref"))
 	static int64 &ModRefInt64(UPARAM(ref) int64 &Ref, const int64 Value);
 
 	UFUNCTION(BlueprintCallable, Category="Math|Float", DisplayName="Mod (single-precision)", meta=(CompactNodeTitle="%=", Keywords="%= modulo modulus assign ref"))
@@ -258,13 +258,13 @@ public:
 	UFUNCTION(BlueprintCallable, Category="Math|Float", DisplayName="Mod (double-precision)", meta=(CompactNodeTitle="%=", Keywords="%= modulo modulus assign ref"))
 	static double &ModRefDouble(UPARAM(ref) double &Ref, const double Value);
 
-	UFUNCTION(BlueprintCallable, Category="Math|Vector4", DisplayName="Mod (Vector4)", meta=(CompactNodeTitle="%=", Keywords="%= modulus modulo assign ref"))
+	UFUNCTION(BlueprintCallable, Category="Math|Vector4", DisplayName="Mod", meta=(CompactNodeTitle="%=", Keywords="%= modulus modulo assign ref"))
 	static FVector4 &ModRefVector4(UPARAM(ref) FVector4 &Ref, const FVector4 &Value);
 
-	UFUNCTION(BlueprintCallable, Category="Math|Vector", DisplayName="Mod (Vector)", meta=(CompactNodeTitle="%=", Keywords="%= modulus modulo assign ref"))
+	UFUNCTION(BlueprintCallable, Category="Math|Vector", DisplayName="Mod", meta=(CompactNodeTitle="%=", Keywords="%= modulus modulo assign ref"))
 	static FVector &ModRefVector(UPARAM(ref) FVector &Ref, const FVector &Value);
 
-	UFUNCTION(BlueprintCallable, Category="Math|Vector2D", DisplayName="Mod (Vector2D)", meta=(CompactNodeTitle="%=", Keywords="%= modulus modulo assign ref"))
+	UFUNCTION(BlueprintCallable, Category="Math|Vector2D", DisplayName="Mod", meta=(CompactNodeTitle="%=", Keywords="%= modulus modulo assign ref"))
 	static FVector2D &ModRefVector2D(UPARAM(ref) FVector2D &Ref, const FVector2D &Value);
 
 #pragma endregion //MOD_REF
@@ -277,19 +277,19 @@ public:
 	UFUNCTION(BlueprintCallable, Category="Math|Integer64", DisplayName="PosMod", meta=(CompactNodeTitle="%= (+)", Keywords="%= + positive modulus modulo assign ref"))
 	static int64 &PosModRefInt64(UPARAM(ref) int64 &Ref, const int64 Value);
 
-	UFUNCTION(BlueprintCallable, Category="Math|Float", DisplayName="PosMod", meta=(CompactNodeTitle="%= (+)", Keywords="%= + positive modulus modulo assign ref"))
+	UFUNCTION(BlueprintCallable, Category="Math|Float", DisplayName="PosMod (single-precision)", meta=(CompactNodeTitle="%= (+)", Keywords="%= + positive modulus modulo assign ref"))
 	static float &PosModRefFloat(UPARAM(ref) float &Ref, const float Value);
 
-	UFUNCTION(BlueprintCallable, Category="Math|Float", DisplayName="PosMod", meta=(CompactNodeTitle="%= (+)", Keywords="%= + positive modulus modulo assign ref"))
+	UFUNCTION(BlueprintCallable, Category="Math|Float", DisplayName="PosMod (double-precision)", meta=(CompactNodeTitle="%= (+)", Keywords="%= + positive modulus modulo assign ref"))
 	static double &PosModRefDouble(UPARAM(ref) double &Ref, const double Value);
 
-	UFUNCTION(BlueprintCallable, Category="Math|Vector4", DisplayName="PosMod (Vector4)", meta=(CompactNodeTitle="%= (+)", Keywords="%= + positive modulus modulo assign ref"))
+	UFUNCTION(BlueprintCallable, Category="Math|Vector4", DisplayName="PosMod", meta=(CompactNodeTitle="%= (+)", Keywords="%= + positive modulus modulo assign ref"))
 	static FVector4 &PosModRefVector4(UPARAM(ref) FVector4 &Ref, const FVector4 &Value);
 
-	UFUNCTION(BlueprintCallable, Category="Math|Vector", DisplayName="PosMod (Vector)", meta=(CompactNodeTitle="%= (+)", Keywords="%= + positive modulus modulo assign ref"))
+	UFUNCTION(BlueprintCallable, Category="Math|Vector", DisplayName="PosMod", meta=(CompactNodeTitle="%= (+)", Keywords="%= + positive modulus modulo assign ref"))
 	static FVector &PosModRefVector(UPARAM(ref) FVector &Ref, const FVector &Value);
 
-	UFUNCTION(BlueprintCallable, Category="Math|Vector2D", DisplayName="PosMod (Vector2D)", meta=(CompactNodeTitle="%= (+)", Keywords="%= + positive modulus modulo assign ref"))
+	UFUNCTION(BlueprintCallable, Category="Math|Vector2D", DisplayName="PosMod", meta=(CompactNodeTitle="%= (+)", Keywords="%= + positive modulus modulo assign ref"))
 	static FVector2D &PosModRefVector2D(UPARAM(ref) FVector2D &Ref, const FVector2D &Value);
 
 #pragma endregion //POS_MOD_REF
@@ -378,13 +378,13 @@ public:
 	UFUNCTION(BlueprintCallable, BlueprintPure, Category="Math|Float", DisplayName="Invert (double-precision)", meta=(CompactNodeTitle="1/x", Keywords="/ invert"))
 	static double InvertDouble(const double Value) { return 1. / Value; }
 
-	UFUNCTION(BlueprintCallable, BlueprintPure, Category="Math|Vector4", DisplayName="Invert (Vector4)", meta=(CompactNodeTitle="1/x", Keywords="/ invert"))
+	UFUNCTION(BlueprintCallable, BlueprintPure, Category="Math|Vector4", DisplayName="Invert", meta=(CompactNodeTitle="1/x", Keywords="/ invert"))
 	static FVector4 InvertVector4(const FVector4 &Value) { return FVector4(1. / Value.X, 1. / Value.Y, 1. / Value.Z, 1. / Value.W); }
 
-	UFUNCTION(BlueprintCallable, BlueprintPure, Category="Math|Vector", DisplayName="Invert (Vector)", meta=(CompactNodeTitle="1/x", Keywords="/ invert"))
+	UFUNCTION(BlueprintCallable, BlueprintPure, Category="Math|Vector", DisplayName="Invert", meta=(CompactNodeTitle="1/x", Keywords="/ invert"))
 	static FVector InvertVector(const FVector &Value) { return FVector(1. / Value.X, 1. / Value.Y, 1. / Value.Z); }
 
-	UFUNCTION(BlueprintCallable, BlueprintPure, Category="Math|Vector2D", DisplayName="Invert (Vector2D)", meta=(CompactNodeTitle="1/x", Keywords="/ invert"))
+	UFUNCTION(BlueprintCallable, BlueprintPure, Category="Math|Vector2D", DisplayName="Invert", meta=(CompactNodeTitle="1/x", Keywords="/ invert"))
 	static FVector2D InvertVector2D(const FVector2D &Value) { return FVector2D(1. / Value.X, 1. / Value.Y); }
 
 #pragma endregion //INVERSION
@@ -431,10 +431,10 @@ public:
 	UFUNCTION(BlueprintCallable, BlueprintPure, Category="Math|Float")
 	static float GetNegativeInfinity() { return -INFINITY; }
 
-	UFUNCTION(BlueprintCallable, BlueprintPure, Category="Math|Float", DisplayName="IsFinite")
+	UFUNCTION(BlueprintCallable, BlueprintPure, Category="Math|Float", DisplayName="IsFinite (single-precision)")
 	static bool IsFiniteFloat(const float Value);
 
-	UFUNCTION(BlueprintCallable, BlueprintPure, Category="Math|Float", DisplayName="IsFinite")
+	UFUNCTION(BlueprintCallable, BlueprintPure, Category="Math|Float", DisplayName="IsFinite (double-precision)")
 	static bool IsFiniteDouble(const double Value);
 
 #pragma endregion //INFINITY
