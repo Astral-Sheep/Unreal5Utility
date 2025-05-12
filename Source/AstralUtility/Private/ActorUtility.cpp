@@ -2,9 +2,16 @@
 
 #include "ActorUtility.h"
 
+#include "MathUtility.h"
+#include "Components/ShapeComponent.h"
 #include "Kismet/KismetMathLibrary.h"
+#include "Kismet/KismetSystemLibrary.h"
 
 // I test if a pointer is null before testing if it is valid because I had occurencies where IsValid made the game crash
+
+// -- AXIS SETTERS --
+
+#pragma region ACTOR
 
 void UActorUtility::SetActorWorldForwardVector(AActor* const Actor, const FVector ForwardVector, const bool Teleport)
 {
@@ -104,6 +111,10 @@ void UActorUtility::SetActorLocalUpVector(AActor* const Actor, const FVector UpV
 		Teleport ? ETeleportType::TeleportPhysics : ETeleportType::None
 	);
 }
+
+#pragma endregion //ACTOR
+
+#pragma region COMPONENT
 
 void UActorUtility::SetComponentWorldForwardVector(USceneComponent* const Component, const FVector ForwardVector, const bool Teleport)
 {
@@ -206,3 +217,71 @@ void UActorUtility::SetComponentLocalUpVector(USceneComponent* const Component, 
 		Teleport ? ETeleportType::TeleportPhysics : ETeleportType::None
 	);
 }
+
+#pragma endregion //COMPONENT
+
+// -- MISCELLANEOUS --
+
+#pragma region SNAPPING
+
+void UActorUtility::SnapActorOnPoint(AActor* const Actor, const FVector PointLocation, const FVector PointNormal, const bool SnapCollisionOnly, const bool Teleport)
+{
+	if (Actor == nullptr || !IsValid(Actor))
+		return;
+
+	const FBoxSphereBounds lBounds = Actor->GetRootComponent()->GetLocalBounds();
+	Actor->SetActorLocation(
+		PointLocation - lBounds.Origin + UMathUtility::NormalizedVector(PointNormal) * lBounds.BoxExtent.Z,
+		false,
+		nullptr,
+		Teleport ? ETeleportType::TeleportPhysics : ETeleportType::None
+	);
+	SetActorWorldUpVector(Actor, PointNormal, Teleport);
+}
+
+void UActorUtility::SnapComponentOnPoint(USceneComponent* const Component, const FVector PointLocation, const FVector PointNormal, const bool Teleport)
+{
+	if (Component == nullptr || !IsValid(Component))
+		return;
+
+	const FBoxSphereBounds lBounds = Component->GetLocalBounds();
+	Component->SetWorldLocation(
+		PointLocation - lBounds.Origin + UMathUtility::NormalizedVector(PointNormal) * lBounds.BoxExtent.Z,
+		false,
+		nullptr,
+		Teleport ? ETeleportType::TeleportPhysics : ETeleportType::None
+	);
+	SetComponentWorldUpVector(Component, PointNormal, Teleport);
+}
+
+void UActorUtility::SnapPrimitiveOnPoint(UPrimitiveComponent* const Primitive, const FVector PointLocation, const FVector PointNormal, const bool Teleport)
+{
+	if (Primitive == nullptr || !IsValid(Primitive))
+		return;
+
+	const FBoxSphereBounds lBounds = Primitive->GetLocalBounds();
+	Primitive->SetWorldLocation(
+		PointLocation - lBounds.Origin + UMathUtility::NormalizedVector(PointNormal) * lBounds.BoxExtent.Z,
+		false,
+		nullptr,
+		Teleport ? ETeleportType::TeleportPhysics : ETeleportType::None
+	);
+	SetComponentWorldUpVector(Primitive, PointNormal, Teleport);
+}
+
+void UActorUtility::SnapShapeOnPoint(UShapeComponent* const Shape, const FVector PointLocation, const FVector PointNormal, const bool Teleport)
+{
+	if (Shape == nullptr || !IsValid(Shape))
+		return;
+
+	const FBoxSphereBounds lBounds = Shape->GetLocalBounds();
+	Shape->SetWorldLocation(
+		PointLocation - lBounds.Origin + UMathUtility::NormalizedVector(PointNormal) * lBounds.BoxExtent.Z,
+		false,
+		nullptr,
+		Teleport ? ETeleportType::TeleportPhysics : ETeleportType::None
+	);
+	SetComponentWorldUpVector(Shape, UMathUtility::NormalizedVector(PointNormal), Teleport);
+}
+
+#pragma endregion //SNAPPING
