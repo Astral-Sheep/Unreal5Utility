@@ -1,6 +1,6 @@
 // Copyright Thomas SURBON. All rights reserved.
 
-#include "Math/MathUtility.h"
+#include "MathUtility.h"
 
 // -- ARITHMETIC OPERATORS --
 
