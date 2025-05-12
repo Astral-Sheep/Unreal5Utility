@@ -5,7 +5,6 @@
 #include "MathUtility.h"
 #include "Components/ShapeComponent.h"
 #include "Kismet/KismetMathLibrary.h"
-#include "Kismet/KismetSystemLibrary.h"
 
 // I test if a pointer is null before testing if it is valid because I had occurencies where IsValid made the game crash
 
@@ -224,7 +223,7 @@ void UActorUtility::SetComponentLocalUpVector(USceneComponent* const Component, 
 
 #pragma region SNAPPING
 
-void UActorUtility::SnapActorOnPoint(AActor* const Actor, const FVector PointLocation, const FVector PointNormal, const bool SnapCollisionOnly, const bool Teleport)
+void UActorUtility::SnapActorOnPoint(AActor* const Actor, const FVector PointLocation, const FVector PointNormal, const bool Teleport)
 {
 	if (Actor == nullptr || !IsValid(Actor))
 		return;

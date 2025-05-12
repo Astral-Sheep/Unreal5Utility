@@ -66,7 +66,7 @@ public:
 #pragma region SNAPPING
 
 	UFUNCTION(BlueprintCallable, Category="Transformation", meta=(AdvancedDisplay="SnapCollisionOnly, Teleport", DefaultToSelf="Actor"))
-	static void SnapActorOnPoint(AActor *const Actor, const FVector PointLocation, const FVector PointNormal, const bool SnapCollisionOnly = false, const bool Teleport = false);
+	static void SnapActorOnPoint(AActor *const Actor, const FVector PointLocation, const FVector PointNormal, const bool Teleport = false);
 
 	UFUNCTION(BlueprintCallable, Category="Transformation", meta=(AdvancedDisplay="Teleport"))
 	static void SnapComponentOnPoint(USceneComponent *const Component, const FVector PointLocation, const FVector PointNormal, const bool Teleport = false);

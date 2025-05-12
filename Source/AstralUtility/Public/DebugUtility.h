@@ -2,6 +2,9 @@
 
 #pragma once
 
+#include "CoreMinimal.h"
+#include "UnrealEngine.h"
+
 class DebugUtility
 {
 public:
