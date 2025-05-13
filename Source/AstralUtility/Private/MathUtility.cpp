@@ -269,7 +269,7 @@ bool UMathUtility::IsFiniteDouble(const double Value)
 
 #pragma region VECTORS
 
-FVector4 UMathUtility::NormalizedVector4(const FVector4& Vector, const float Tolerance)
+FVector4 UMathUtility::NormalizedVector4(const FVector4 Vector, const float Tolerance)
 {
 	float lLength = Vector.SizeSquared();
 
@@ -282,7 +282,7 @@ FVector4 UMathUtility::NormalizedVector4(const FVector4& Vector, const float Tol
 	return FVector4(Vector.X / lLength, Vector.Y / lLength, Vector.Z / lLength, Vector.W / lLength);
 }
 
-FVector UMathUtility::NormalizedVector(const FVector& Vector, const float Tolerance)
+FVector UMathUtility::NormalizedVector(const FVector Vector, const float Tolerance)
 {
 	float lLength = Vector.SquaredLength();
 
@@ -295,7 +295,7 @@ FVector UMathUtility::NormalizedVector(const FVector& Vector, const float Tolera
 	return FVector(Vector.X / lLength, Vector.Y / lLength, Vector.Z / lLength);
 }
 
-FVector2D UMathUtility::NormalizedVector2D(const FVector2D& Vector, const float Tolerance)
+FVector2D UMathUtility::NormalizedVector2D(const FVector2D Vector, const float Tolerance)
 {
 	const float lLength = Vector.Length();
 
@@ -307,27 +307,27 @@ FVector2D UMathUtility::NormalizedVector2D(const FVector2D& Vector, const float 
 	return FVector2D(Vector.X / lLength, Vector.Y / lLength);
 }
 
-double UMathUtility::AngleBetweenVector4(const FVector4& A, const FVector4& B)
+double UMathUtility::AngleBetweenVector4(const FVector4 A, const FVector4 B)
 {
 	return FMath::Acos(DotVector4(NormalizedVector4(A), NormalizedVector4(B)));
 }
 
-double UMathUtility::AngleBetweenVector(const FVector& A, const FVector& B)
+double UMathUtility::AngleBetweenVector(const FVector A, const FVector B)
 {
 	return FMath::Acos(NormalizedVector(A).Dot(NormalizedVector(B)));
 }
 
-double UMathUtility::AngleBetweenVector2D(const FVector2D& A, const FVector2D& B)
+double UMathUtility::AngleBetweenVector2D(const FVector2D A, const FVector2D B)
 {
 	return FMath::Atan2(B.Y - A.Y, B.X - A.Y);
 }
 
-double UMathUtility::DotVector4(const FVector4& A, const FVector4& B)
+double UMathUtility::DotVector4(const FVector4 A, const FVector4 B)
 {
 	return A.X * B.X + A.Y * B.Y + A.Z * B.Z + A.W * B.W;
 }
 
-FVector UMathUtility::CartesianToCylindrical(const FVector& Vector)
+FVector UMathUtility::CartesianToCylindrical(const FVector Vector)
 {
 	return FVector(
 		FMath::Sqrt(Vector.X * Vector.X + Vector.Y * Vector.Y),
@@ -336,7 +336,7 @@ FVector UMathUtility::CartesianToCylindrical(const FVector& Vector)
 	);
 }
 
-FVector UMathUtility::CartesianToSpherical(const FVector& Vector)
+FVector UMathUtility::CartesianToSpherical(const FVector Vector)
 {
 	const float lLength = Vector.Length();
 	return FVector(
@@ -346,7 +346,7 @@ FVector UMathUtility::CartesianToSpherical(const FVector& Vector)
 	);
 }
 
-FVector UMathUtility::CylindricalToCartesian(const FVector& Vector)
+FVector UMathUtility::CylindricalToCartesian(const FVector Vector)
 {
 	return FVector(
 		Vector.X * FMath::Cos(Vector.Y),
@@ -355,7 +355,7 @@ FVector UMathUtility::CylindricalToCartesian(const FVector& Vector)
 	);
 }
 
-FVector UMathUtility::CylindricalToSpherical(const FVector& Vector)
+FVector UMathUtility::CylindricalToSpherical(const FVector Vector)
 {
 	const float lLength = FMath::Sqrt(Vector.X * Vector.X + Vector.Z * Vector.Z);
 	return FVector(
@@ -365,7 +365,7 @@ FVector UMathUtility::CylindricalToSpherical(const FVector& Vector)
 	);
 }
 
-FVector UMathUtility::SphericalToCartesian(const FVector& Vector)
+FVector UMathUtility::SphericalToCartesian(const FVector Vector)
 {
 	return FVector(
 		Vector.X * FMath::Cos(Vector.Z) * FMath::Cos(Vector.Y),
@@ -374,7 +374,7 @@ FVector UMathUtility::SphericalToCartesian(const FVector& Vector)
 	);
 }
 
-FVector UMathUtility::SphericalToCylindrical(const FVector& Vector)
+FVector UMathUtility::SphericalToCylindrical(const FVector Vector)
 {
 	return FVector(
 		Vector.X * FMath::Cos(Vector.Z),
@@ -383,7 +383,7 @@ FVector UMathUtility::SphericalToCylindrical(const FVector& Vector)
 	);
 }
 
-FVector2D UMathUtility::CartesianToPolar(const FVector2D& Vector)
+FVector2D UMathUtility::CartesianToPolar(const FVector2D Vector)
 {
 	return FVector2D(
 		Vector.Length(),
@@ -391,7 +391,7 @@ FVector2D UMathUtility::CartesianToPolar(const FVector2D& Vector)
 	);
 }
 
-FVector2D UMathUtility::PolarToCartesian(const FVector2D& Vector)
+FVector2D UMathUtility::PolarToCartesian(const FVector2D Vector)
 {
 	return FVector2D(
 		Vector.X * FMath::Cos(Vector.Y),
@@ -403,22 +403,22 @@ FVector2D UMathUtility::PolarToCartesian(const FVector2D& Vector)
 
 #pragma region ROTATOR
 
-FRotator UMathUtility::AddRotator(const FRotator& A, const FRotator& B)
+FRotator UMathUtility::AddRotator(const FRotator A, const FRotator B)
 {
 	return FRotator(A.Pitch + B.Pitch, A.Yaw + B.Yaw, A.Roll + B.Roll);
 }
 
-FRotator UMathUtility::SubRotator(const FRotator& A, const FRotator& B)
+FRotator UMathUtility::SubRotator(const FRotator A, const FRotator B)
 {
 	return FRotator(A.Pitch - B.Pitch, A.Yaw - B.Yaw, A.Roll - B.Roll);
 }
 
 #pragma endregion //ROTATOR
 
-FVector UMathUtility::RotateFromAngle(const FTransform& Transform, const FVector& Euler, const FVector& Axis)
+FVector UMathUtility::RotateFromAngle(const FTransform &Transform, const FVector Euler, const FVector Axis)
 {
-	const auto angle = FRotator::MakeFromEuler(Euler);
-	return Transform.TransformVector(angle.RotateVector(Axis));
+	const FRotator lAngle = FRotator::MakeFromEuler(Euler);
+	return Transform.TransformVector(lAngle.RotateVector(Axis));
 }
 
 // -- MISCELLANEOUS --
@@ -432,4 +432,9 @@ FVector UMathUtility::SphereLineIntersection(const float SphereRadius, const FVe
 	const float d1 = (-b - FMath::Sqrt(delta)) / 2.f * a; // (-b - sqrt(delta)) / 2a
 	const float d2 = (-b + FMath::Sqrt(delta)) / 2.f * a; // (-b + sqrt(delta)) / 2a
 	return LinePoint + LineDirection * FMath::Max(d1, d2);
+}
+
+FVector UMathUtility::RotateAround(const FVector Point, const FVector Origin, const FRotator Rotation)
+{
+	return Rotation.RotateVector(Point - Origin) + Origin;
 }

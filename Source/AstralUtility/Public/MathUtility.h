@@ -379,13 +379,13 @@ public:
 	static double InvertDouble(const double Value) { return 1. / Value; }
 
 	UFUNCTION(BlueprintCallable, BlueprintPure, Category="Math|Vector4", DisplayName="Invert", meta=(CompactNodeTitle="1/x", Keywords="/ invert"))
-	static FVector4 InvertVector4(const FVector4 &Value) { return FVector4(1. / Value.X, 1. / Value.Y, 1. / Value.Z, 1. / Value.W); }
+	static FVector4 InvertVector4(const FVector4 Value) { return FVector4(1. / Value.X, 1. / Value.Y, 1. / Value.Z, 1. / Value.W); }
 
 	UFUNCTION(BlueprintCallable, BlueprintPure, Category="Math|Vector", DisplayName="Invert", meta=(CompactNodeTitle="1/x", Keywords="/ invert"))
-	static FVector InvertVector(const FVector &Value) { return FVector(1. / Value.X, 1. / Value.Y, 1. / Value.Z); }
+	static FVector InvertVector(const FVector Value) { return FVector(1. / Value.X, 1. / Value.Y, 1. / Value.Z); }
 
 	UFUNCTION(BlueprintCallable, BlueprintPure, Category="Math|Vector2D", DisplayName="Invert", meta=(CompactNodeTitle="1/x", Keywords="/ invert"))
-	static FVector2D InvertVector2D(const FVector2D &Value) { return FVector2D(1. / Value.X, 1. / Value.Y); }
+	static FVector2D InvertVector2D(const FVector2D Value) { return FVector2D(1. / Value.X, 1. / Value.Y); }
 
 #pragma endregion //INVERSION
 
@@ -442,75 +442,75 @@ public:
 #pragma region VECTORS
 
 	UFUNCTION(BlueprintCallable, BlueprintPure, Category="Math|Vector4", DisplayName="Normalized")
-	static FVector4 NormalizedVector4(const FVector4& Vector, const float Tolerance = 1e-4f);
+	static FVector4 NormalizedVector4(const FVector4 Vector, const float Tolerance = 1e-4f);
 
 	UFUNCTION(BlueprintCallable, BlueprintPure, Category="Math|Vector", DisplayName="Normalized")
-	static FVector NormalizedVector(const FVector& Vector, const float Tolerance = 1e-4f);
+	static FVector NormalizedVector(const FVector Vector, const float Tolerance = 1e-4f);
 
 	UFUNCTION(BlueprintCallable, BlueprintPure, Category="Math|Vector2D", DisplayName="Normalized")
-	static FVector2D NormalizedVector2D(const FVector2D& Vector, const float Tolerance = 1e-4f);
+	static FVector2D NormalizedVector2D(const FVector2D Vector, const float Tolerance = 1e-4f);
 
 	UFUNCTION(BlueprintCallable, BlueprintPure, Category="Math|Vector4", DisplayName="AngleBetween")
-	static double AngleBetweenVector4(const FVector4& A, const FVector4& B);
+	static double AngleBetweenVector4(const FVector4 A, const FVector4 B);
 
 	UFUNCTION(BlueprintCallable, BlueprintPure, Category="Math|Vector", DisplayName="AngleBetween")
-	static double AngleBetweenVector(const FVector& A, const FVector& B);
+	static double AngleBetweenVector(const FVector A, const FVector B);
 
 	UFUNCTION(BlueprintCallable, BlueprintPure, Category="Math|Vector2D", DisplayName="AngleBetween")
-	static double AngleBetweenVector2D(const FVector2D& A, const FVector2D& B);
+	static double AngleBetweenVector2D(const FVector2D A, const FVector2D B);
 
 	UFUNCTION(BlueprintCallable, BlueprintPure, Category="Math|Vector4", DisplayName="DotProduct", meta=(CompactNodeTitle="Dot"))
-	static double DotVector4(const FVector4& A, const FVector4& B);
+	static double DotVector4(const FVector4 A, const FVector4 B);
 
 	// Convert Vector from cartesian coordinates to cylindrical coordinates
 	// (x, y, z) -> (ρ, φ, z)
 	UFUNCTION(BlueprintCallable, BlueprintPure, Category="Math|Vector")
-	static FVector CartesianToCylindrical(const FVector& Vector);
+	static FVector CartesianToCylindrical(const FVector Vector);
 
 	// Convert Vector from cartesian coordinates to spherical coordinates
 	// (x, y, z) -> (r, φ, θ)
 	UFUNCTION(BlueprintCallable, BlueprintPure, Category="Math|Vector")
-	static FVector CartesianToSpherical(const FVector& Vector);
+	static FVector CartesianToSpherical(const FVector Vector);
 
 	// Convert Vector from cylindrical coordinates to cartesian coordinates
 	// (ρ, φ, z) -> (x, y, z)
 	UFUNCTION(BlueprintCallable, BlueprintPure, Category="Math|Vector")
-	static FVector CylindricalToCartesian(const FVector& Vector);
+	static FVector CylindricalToCartesian(const FVector Vector);
 
 	// Convert Vector from cylindrical coordinates to spherical coordinates
 	// (ρ, φ, z) -> (r, φ, θ)
 	UFUNCTION(BlueprintCallable, BlueprintPure, Category="Math|Vector")
-	static FVector CylindricalToSpherical(const FVector& Vector);
+	static FVector CylindricalToSpherical(const FVector Vector);
 
 	// Convert Vector from spherical coordinates to cartesian coordinates
 	// (r, φ, θ) -> (x, y, z)
 	UFUNCTION(BlueprintCallable, BlueprintPure, Category="Math|Vector")
-	static FVector SphericalToCartesian(const FVector& Vector);
+	static FVector SphericalToCartesian(const FVector Vector);
 
 	// Convert Vector from spherical coordinates to cylindrical coordinates
 	// (r, φ, θ) -> (ρ, φ, z)
 	UFUNCTION(BlueprintCallable, BlueprintPure, Category="Math|Vector")
-	static FVector SphericalToCylindrical(const FVector& Vector);
+	static FVector SphericalToCylindrical(const FVector Vector);
 
 	// Convert Vector from cartesian coordinates to polar coordinates
 	// (x, y) -> (r, θ)
 	UFUNCTION(BlueprintCallable, BlueprintPure, Category="Math|Vector2D")
-	static FVector2D CartesianToPolar(const FVector2D& Vector);
+	static FVector2D CartesianToPolar(const FVector2D Vector);
 
 	// Convert Vector from polar coordinates to cartesian coordinates
 	// (r, θ) -> (x, y)
 	UFUNCTION(BlueprintCallable, BlueprintPure, Category="Math|Vector2D")
-	static FVector2D PolarToCartesian(const FVector2D& Vector);
+	static FVector2D PolarToCartesian(const FVector2D Vector);
 
 #pragma endregion //VECTORS
 
 #pragma region ROTATOR
 
 	UFUNCTION(BlueprintCallable, BlueprintPure, Category="Math|Rotator", DisplayName="Add", meta=(CompactNodeTitle="+", Keywords="+ add"))
-	static FRotator AddRotator(const FRotator& A, const FRotator& B);
+	static FRotator AddRotator(const FRotator A, const FRotator B);
 
 	UFUNCTION(BlueprintCallable, BlueprintPure, Category="Math|Rotator", DisplayName="Subtract", meta=(CompactNodeTitle="-", Keywords="- subtract"))
-	static FRotator SubRotator(const FRotator& A, const FRotator& B);
+	static FRotator SubRotator(const FRotator A, const FRotator B);
 
 #pragma endregion //ROTATOR
 
@@ -520,16 +520,15 @@ public:
 	static FTransform GetIdentityTransform() { return FTransform::Identity; }
 
 	UFUNCTION(BlueprintCallable, BlueprintPure, Category="Math|Transform")
-	static FVector RotateFromAngle(const FTransform& Transform, const FVector& Euler, const FVector& Axis = FVector::ForwardVector);
+	static FVector RotateFromAngle(const FTransform &Transform, const FVector Euler, const FVector Axis = FVector::ForwardVector);
 
 #pragma endregion //TRANSFORM
 
 	// -- MISCELLANEOUS --
 
-	UFUNCTION(BlueprintCallable, Category="Math")
+	UFUNCTION(BlueprintCallable, BlueprintPure, Category="Math")
 	static FVector SphereLineIntersection(const float SphereRadius, const FVector SphereCenter, const FVector LinePoint, const FVector LineDirection);
 
-	// TODO: rotate point around point
+	UFUNCTION(BlueprintCallable, BlueprintPure, Category="Math")
+	static FVector RotateAround(const FVector Point, const FVector Origin, const FRotator Rotation);
 };
-
-// TODO: add actor utility with axis setters (forward, right, up)
