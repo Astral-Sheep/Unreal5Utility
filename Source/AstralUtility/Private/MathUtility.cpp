@@ -2,6 +2,8 @@
 
 #include "MathUtility.h"
 
+#include "Kismet/KismetMathLibrary.h"
+
 // -- ARITHMETIC OPERATORS --
 
 #pragma region MOD
@@ -437,4 +439,15 @@ FVector UMathUtility::SphereLineIntersection(const float SphereRadius, const FVe
 FVector UMathUtility::RotateAround(const FVector Point, const FVector Origin, const FRotator Rotation)
 {
 	return Rotation.RotateVector(Point - Origin) + Origin;
+}
+
+float UMathUtility::DistanceToPlane(const FVector Point, const FVector PlaneBase, FVector PlaneNormal)
+{
+	PlaneNormal = NormalizedVector(PlaneNormal);
+	const FVector lProjection = UKismetMathLibrary::ProjectPointOnToPlane(Point, PlaneBase, PlaneNormal);
+
+	if (lProjection.Equals(Point))
+		return 0.f;
+
+	return FVector::Distance(Point, lProjection) * NormalizedVector(Point - lProjection).Dot(PlaneNormal);
 }
