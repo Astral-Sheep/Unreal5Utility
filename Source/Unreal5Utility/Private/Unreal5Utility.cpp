@@ -1,15 +1,15 @@
 // Copyright Epic Games, Inc. All Rights Reserved.
 
-#include "AstralUtility.h"
+#include "Unreal5Utility.h"
 
-#define LOCTEXT_NAMESPACE "FAstralUtilityModule"
+#define LOCTEXT_NAMESPACE "FUnreal5UtilityModule"
 
-void FAstralUtilityModule::StartupModule()
+void FUnreal5UtilityModule::StartupModule()
 {
 	// This code will execute after your module is loaded into memory; the exact timing is specified in the .uplugin file per-module
 }
 
-void FAstralUtilityModule::ShutdownModule()
+void FUnreal5UtilityModule::ShutdownModule()
 {
 	// This function may be called during shutdown to clean up your module.  For modules that support dynamic reloading,
 	// we call this function before unloading the module.
@@ -17,4 +17,4 @@ void FAstralUtilityModule::ShutdownModule()
 
 #undef LOCTEXT_NAMESPACE
 
-IMPLEMENT_MODULE(FAstralUtilityModule, AstralUtility)
+IMPLEMENT_MODULE(FUnreal5UtilityModule, Unreal5Utility)

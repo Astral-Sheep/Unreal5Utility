@@ -5,7 +5,7 @@
 #include "CoreMinimal.h"
 #include "Modules/ModuleManager.h"
 
-class FAstralUtilityModule : public IModuleInterface
+class FUnreal5UtilityModule : public IModuleInterface
 {
 public:
 

@@ -10,7 +10,7 @@
  * Function library containing usual math functions
  */
 UCLASS()
-class ASTRALUTILITY_API UMathUtility : public UBlueprintFunctionLibrary
+class UNREAL5UTILITY_API UMathUtility : public UBlueprintFunctionLibrary
 {
 	GENERATED_BODY()
 

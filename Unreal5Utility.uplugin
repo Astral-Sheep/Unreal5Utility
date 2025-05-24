@@ -1,10 +1,10 @@
 {
 	"FileVersion": 3,
 	"Version": 1,
-	"VersionName": "1.1.2",
-	"FriendlyName": "AstralUtility",
+	"VersionName": "1.2",
+	"FriendlyName": "Unreal5Utility",
 	"Description": "Utility classes for Unreal Engine 5",
-	"Category": "Other",
+	"Category": "Scripting",
 	"CreatedBy": "Astral_Sheep",
 	"CreatedByURL": "",
 	"DocsURL": "",
@@ -16,7 +16,7 @@
 	"Installed": false,
 	"Modules": [
 		{
-			"Name": "AstralUtility",
+			"Name": "Unreal5Utility",
 			"Type": "Runtime",
 			"LoadingPhase": "Default"
 		}

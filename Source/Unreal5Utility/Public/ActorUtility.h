@@ -10,7 +10,7 @@
  * Function library containing utility functions for actors and components
  */
 UCLASS()
-class ASTRALUTILITY_API UActorUtility : public UBlueprintFunctionLibrary
+class UNREAL5UTILITY_API UActorUtility : public UBlueprintFunctionLibrary
 {
 	GENERATED_BODY()
 
