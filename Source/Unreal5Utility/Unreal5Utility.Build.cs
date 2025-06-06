@@ -11,13 +11,13 @@ public class Unreal5Utility : ModuleRules
 		PublicDependencyModuleNames.AddRange(
 			new string[] {
 				"Core",
+				"CoreUObject",
+				"Engine",
 			}
 		);
 
 		PrivateDependencyModuleNames.AddRange(
 			new string[] {
-				"CoreUObject",
-				"Engine",
 			}
 		);
 	}
